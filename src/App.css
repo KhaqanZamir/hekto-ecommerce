@@ -1,0 +1,117 @@
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 760px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 980px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1190px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+      max-width: 1880px;
+      width: 70%;
+  }
+}
+
+@media (min-width: 1900px) {
+  .container {
+      max-width: 1900px;
+  }
+}
+
+.lamp-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-80%, -26%);
+  height: 65%;
+}
+
+@media (max-width: 1460px) {
+  .lamp-hero {
+    left: auto;
+    right: 0;
+    transform: translate(15%, -22%);
+    height: 40%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .lamp-hero {
+    transform: translate(38%, -25%);
+    height: 40%;
+  }
+}
+
+@media (max-width: 637px) {
+  .lamp-hero {
+    transform: translate(49%, -27%);
+    height: 40%;
+  }
+}
+
+.sofa-hero {
+  transform: translateX(25%) scale(1);
+  animation: keepScaling 2s steps(1, start) infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes keepScaling {
+  50% {
+    transform: translateX(25%) scale(1.05);
+  }
+}
+
+@media (max-width: 1460px) {
+  .sofa-hero {
+    transform: translateX(0%) scale(1);
+  }
+
+  @keyframes keepScaling {
+    50% {
+      transform: translateX(0%) scale(1.05);
+    }
+  }
+}
+
+.featured-product > div:first-child > div,
+.featured-product > div:first-child > button {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.featured-product > div:first-child > div,
+.featured-product > div:first-child > button,
+.featured-product > .featured-product-content {
+  transition: 1s;
+}
+
+.featured-product:hover > div:first-child > div,
+.featured-product:hover > div:first-child > button {
+  visibility: visible;
+  opacity: 1;
+}
+
+.featured-product:hover > .featured-product-content {
+  color: white;
+  background-color: #2F1AC4;
+}

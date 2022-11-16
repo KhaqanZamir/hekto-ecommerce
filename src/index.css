@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.styled-btn-1 {
+  outline: none;
+  border: none;
+  z-index: 1;
+}
+.styled-btn-1:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: blueviolet;
+  transition: all 0.3s ease;
+}
+
+.styled-btn-1:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+.featured-product-carousel .slick-dots {
+  bottom: -35px;
+}
+
+.featured-product-carousel .slick-dots li {
+  width: 20px;
+  height: 12px;
+}
+
+.featured-product-carousel .slick-dots li button {
+  width: 20px;
+  height: 5px;
+  padding: 0px;
+  background: #FB2E86;
+  opacity: 0.25;
+  border-radius: 5px;
+}
+
+.featured-product-carousel .slick-dots li.slick-active button {
+  opacity: 1;
+}
+
+.featured-product-carousel .slick-dots li.slick-active button:before,
+.featured-product-carousel .slick-dots li button:before {
+  opacity: 0;
+}
+
+.featured-product-carousel .slick-list {
+  padding: 40px 0px;
+}
+
+.featured-product-carousel .slick-list .slick-track {
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+/* .featured-product-carousel .slick-track .slick-slide.slick-active.slick-current {
+  margin-left: 120px;
+}
+
+.featured-product-carousel .slick-track .slick-slide.slick-active.slick-current + div + div + div {
+  margin-right: 120px;
+} */

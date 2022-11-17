@@ -13,7 +13,7 @@ export default function FeaturedCard({item}) {
             <button><FontAwesomeIcon className='text-[#1389FF]' icon={faHeart}/></button>
             <button><FontAwesomeIcon className='text-[#1389FF]' icon={faMagnifyingGlassPlus}/></button>
           </div>
-          <img className='m-auto cursor-zoom-in' src={item.myImage} alt='featured-product' />
+          <img className='m-auto' src={item.myImage} alt='featured-product' />
           <button className='absolute bottom-3 left-[50%] -translate-x-[50%] rounded-sm bg-green-400 text-xs text-white  px-3 py-2'>View Details</button>
         </div>
         <div className='p-4 featured-product-content bg-white'>

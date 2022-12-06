@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function LatestCard({item}) {
   return (
-    <div className='min-w-[280px] md:min-w-[360px] flex-1 h-auto mx-auto cursor-pointer latest-product-card'>
+    <div className='min-w-[280px] md:min-w-[30%] flex-1 h-auto mx-auto cursor-pointer latest-product-card'>
         <div className='w-full h-[300px] flex bg-light-gray-3 hover:bg-white relative'>
             <div className='absolute top-0 left-0 text-white ribbon ribbon-top-left'>
                 <span>Sale</span>

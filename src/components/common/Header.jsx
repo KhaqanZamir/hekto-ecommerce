@@ -8,13 +8,27 @@ import {
   faCartShopping,
   faPhone,
   faSearch,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/logo.svg";
 
 export default function Header() {
+
+  const [showMenu, setShowMemu] = useState(false);
+
+  window.addEventListener('resize', function(){
+    if(window.innerWidth <= 1024){
+      setShowMemu(true);
+    } else {
+      setShowMemu(false);
+    }
+  })
+  
+
   return (
+    <>
     <header>
       {/* ===== Top Header ===== */}
       <div className="w-full bg-purple h-auto">
@@ -55,12 +69,12 @@ export default function Header() {
             <div className="flex items-center gap-28">
               <img className="" src={Logo} alt="" />
               <ul className="list-none flex items-baseline gap-7">
-                <li>Home</li>
-                <li>Pages</li>
-                <li>Products</li>
-                <li>Blog</li>
-                <li>Shop</li>
-                <li>Contact</li>
+                <li className="text-base font-normal text-off-blue cursor-pointer">Home</li>
+                <li className="text-base font-normal text-off-blue cursor-pointer">Pages</li>
+                <li className="text-base font-normal text-off-blue cursor-pointer">Products</li>
+                <li className="text-base font-normal text-off-blue cursor-pointer">Blog</li>
+                <li className="text-base font-normal text-off-blue cursor-pointer">Shop</li>
+                <li className="text-base font-normal text-off-blue cursor-pointer">Contact</li>
               </ul>
             </div>
             <div className="flex">
@@ -74,14 +88,38 @@ export default function Header() {
               </button>
             </div>
           </div>
-          <button className="block lg:hidden rounded-full w-9 h-9 bg-gray-400">
+          <button className="block lg:hidden rounded-full w-9 h-9 bg-gray-400" onClick={() => setShowMemu(!showMenu)}>
             <FontAwesomeIcon icon={faBars} />
           </button>
-          {/* <div className="block lg:hidden absolute left-0 top-0 w-[315px] h-[100vh] bg-black">
-
-          </div> */}
+          
         </div>
       </div>
+
     </header>
+    { showMenu ? <div className="block lg:hidden fixed left-0 top-0 w-[315px] h-[100vh] bg-[#fcecf1]/[0.95] z-50">
+      <div className="relative w-full px-5 py-10">
+        <button className="absolute top-5 right-5" onClick={() => setShowMemu(false)}><FontAwesomeIcon icon={faXmark} /></button>
+        <img className="w-[30%]" src={Logo} alt="" />
+        <ul className="list-none flex flex-col gap-4 mt-10">
+          <li className="text-base font-normal text-off-blue cursor-pointer">Home</li>
+          <li className="text-base font-normal text-off-blue cursor-pointer">Pages</li>
+          <li className="text-base font-normal text-off-blue cursor-pointer">Products</li>
+          <li className="text-base font-normal text-off-blue cursor-pointer">Blog</li>
+          <li className="text-base font-normal text-off-blue cursor-pointer">Shop</li>
+          <li className="text-base font-normal text-off-blue cursor-pointer">Contact</li>
+        </ul>
+        <div className="flex mt-8">
+              <input
+                className=" px-2 py-1 border-[2px] border-r-0 border-[#E7E6EF] outline-none"
+                type={"text"}
+                placeholder="Search"
+              />
+              <button className="bg-pink px-3">
+                <FontAwesomeIcon color="white" icon={faSearch} />
+              </button>
+            </div>
+      </div>
+    </div> : '' }
+    </>
   );
 }

@@ -184,3 +184,42 @@
   top: 20px;
   transform: rotate(-45deg);
 }
+
+.unique-features-points li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  font-size: 20px;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 20px; 
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+}
+
+.unique-features-points li:first-child::before {
+  color: #F52B70;
+}
+
+.unique-features-points li:nth-child(2)::before {
+  color: #2B2BF5;
+}
+
+.unique-features-points li:nth-child(3)::before {
+  color: #2BF5CC;
+}
+
+.top-category-media button {
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.top-category-media:hover button {
+  opacity: 1;
+}
+
+/* ======================================= */
+/* ============= Blog Card ============= */
+/* ======================================= */
+
+.blog-card:hover h4, .blog-card:hover a {
+  color: #F52B70;
+}

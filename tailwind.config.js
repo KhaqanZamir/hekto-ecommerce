@@ -25,6 +25,8 @@ module.exports = {
         "light-gray": "#F1F1F1",
         "light-gray-2": "#F6F7FB",
         "light-gray-3": "#F7F7F7",
+        "dark-gray": "#B7BACB",
+        "light-skin": "#FFF6FB",
         "gray-text": "#8A8FB9",
         "pink": "#FB2E86",
         "off-blue": "#151875",
@@ -32,10 +34,15 @@ module.exports = {
         "panton-purple": "#E0D3F5",
         "red": "#FB2448",
         "off-purple": "#9F63B5",
+        "off-purple-2": "#9877E7",
+        "light-green": "#08D15F",
       },
       boxShadow: {
         'style-1': '0 8px 22px 0 rgba(49, 32, 138, 0.15)',
       },
+      backgroundImage: {
+        "newsletter": "url('/src/assets/newsletter_image.svg')"
+      }
     },
   },
   plugins: [],

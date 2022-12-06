@@ -74,7 +74,9 @@ code {
 }
 
 .featured-product-carousel .slick-dots li.slick-active button:before,
-.featured-product-carousel .slick-dots li button:before {
+.featured-product-carousel .slick-dots li button:before,
+.top-categories-carousel .slick-dots li.slick-active button:before,
+.top-categories-carousel .slick-dots li button:before  {
   opacity: 0;
 }
 
@@ -83,6 +85,42 @@ code {
 }
 
 .featured-product-carousel .slick-list .slick-track {
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+/* ================================= */
+/* ===== Top Category Carousel ===== */
+/* ================================= */
+
+.top-categories-carousel .slick-dots {
+  bottom: -50px;
+}
+
+.top-categories-carousel .slick-dots li {
+  width: 10px;
+  height: 10px;
+}
+
+.top-categories-carousel .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  padding: 0px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #FB2E86;
+}
+
+.top-categories-carousel .slick-dots li.slick-active button {
+  background-color: #FB2E86;
+}
+
+.top-categories-carousel .slick-list {
+  padding: 40px 0px;
+}
+
+.top-categories-carousel .slick-list .slick-track {
   display: flex;
   justify-content: flex-start;
   gap: 25px;

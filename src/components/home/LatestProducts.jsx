@@ -36,7 +36,7 @@ export default function LatestProducts() {
     ]
 
   return (
-    <div className='w-full bg-white mt-16 md:mt-32 mb-10 overflow-hidden'>
+    <div className='w-full bg-white mt-10 md:mt-16 mb-10 overflow-hidden'>
         <div className='container items-center mx-auto h-auto'>
             <h3 className='font-josefin font-bold text-2xl md:text-4xl text-center text-dark-blue'>Latest Products</h3>
             <div className='flex flex-wrap justify-center items-center gap-5 md:gap-10 w-full mt-5'>
